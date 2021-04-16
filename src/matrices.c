@@ -1619,6 +1619,7 @@ zsl_mtx_svd(struct zsl_mtx *m, struct zsl_mtx *u, struct zsl_mtx *e,
 	/* Expand the columns of 'u' into an orthonormal basis if there are
 	 * zero eigenvalues or if the number of columns in 'm' is less than the
 	 * number of rows. */
+	// TODO: Problem with stack overflow on 2.5.0 here:
 	zsl_mtx_eigenvectors(&aat, &upri, iter, true);
 	for (size_t f = min - pu; f < m->sz_rows; f++) {
 		zsl_mtx_get_col(&upri, f, hu.data);

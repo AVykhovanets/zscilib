@@ -64,7 +64,7 @@ void svd_demo(void)
 	printf("\n");
 
 	/* Calculate and display the SVD using 150 iterations. */
-	zsl_mtx_svd(&mep, &u, &e, &v, 15);
+	zsl_mtx_svd(&mep, &u, &e, &v, 150);
 	printf("SVD OUTPUT\n");
 	printf("----------\n");
 	printf("U matrix (18x18):\n");
